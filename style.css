@@ -1,0 +1,84 @@
+body{
+ margin:0;
+ padding:0;
+ min-height:100vh;
+ display:flex;
+ justify-content: center;
+ align-items:center;
+ background-color: #262626;
+}
+.Heart{
+ width:100px;
+ height:100px;
+ background-color: red;
+ transform:rotate(-45deg);
+ box-shadow:-10px 10px 120px red;
+ animation: heart 0.5s linear infinite;
+}
+
+@keyframes heart{
+ 
+ 0%{
+  transform:rotate(-45deg) scale(1.07);
+ }
+ 
+ 100%{
+  transform:rotate(-45deg) scale(1.0);
+ }
+ 
+ 100%{
+  transform:rotate(-45deg) scale(0.8);
+ }
+ 
+}
+
+.Heart:before{
+ content:'';
+ position:absolute;
+ width:100px;
+ height: 100px;
+ background-color: red;
+ top:-50%;
+ border-radius:60px;
+ box-shadow: -10px 10px 120px red;
+}
+
+.Heart:after{
+ content:'';
+ position:absolute;
+ width:100px;
+ height: 100px;
+ background-color: red;
+ right:-50%;
+ border-radius:60px;
+ box-shadow: -10px 10px 120px red;
+}
+
+h6{
+ position: absolute;
+ top:60%;
+ font-size: 20px;
+ color:red;
+ text-transform: uppercase;
+ width:100%;
+ text-align: center;
+ -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+ line-height:0.70em;
+ outline:none;
+ animation:animate 5s linear infinite;
+}
+
+@keyframes animate{
+ 0%,18%,20%,50%,1%,60%,65.1%,80%,90.1%,92%{
+  color:red;
+  box-shadow: none;
+ }
+ 
+ 18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+ text-shadow: 0 0 10px red,
+ 0 0 20px red,
+ 0 0 40px red,
+ 0 0 160px red;
+ }
+ 
+}
